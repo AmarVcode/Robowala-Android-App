@@ -1,7 +1,11 @@
 package com.example.robowalaapp
 
+import android.graphics.SurfaceTexture
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.Menu
+import android.view.Surface
+import android.widget.VideoView
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -50,4 +54,29 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
+    fun onSurfaceTextureAvailable(surfaceTexture: SurfaceTexture?, width: Int, height: Int) {
+        //  SurfaceTexture is ready for use.
+        val surface = Surface(surfaceTexture)
+        var mediaPlayer = MediaPlayer()
+        //Some code here
+        mediaPlayer?.setSurface(surface)
+
+        //some code here
+        mediaPlayer?.setOnPreparedListener(object : MediaPlayer.OnPreparedListener {
+            override fun onPrepared(player: MediaPlayer?) {
+                player?.start()
+            }
+        })
+    }
+    fun onSurfaceTextureUpdated(surfaceTexture: SurfaceTexture?) {
+        // Specified SurfaceTexture is updated through
+    }
+    fun onSurfaceTextureDestroyed(surfaceTexture: SurfaceTexture?): Boolean {
+        //  SurfaceTexture is about to be destroyed.
+        return false
+    }
+    fun onSurfaceTextureSizeChanged(surfaceTexture: SurfaceTexture?, p1: Int, p2: Int) {
+        //SurfaceTexture's buffers size changed
+    }
+
 }
