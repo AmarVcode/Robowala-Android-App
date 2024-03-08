@@ -15,9 +15,9 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#FDDC5C"
+            android:background="#FFD700"
             app:popupTheme="@style/Theme.RobowalaApp.PopupOverlay"
-            app:titleTextColor="#000000" />
+            app:titleTextColor="#FFFFFF" />
 
     </com.google.android.material.appbar.AppBarLayout>
 

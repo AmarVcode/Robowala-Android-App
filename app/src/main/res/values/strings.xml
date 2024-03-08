@@ -10,4 +10,9 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Service</string>
     <string name="menu_slideshow">Contact</string>
+
+
+    //for home Activity
+    <string name="heading_main">Our Products</string>
+    <string name="heading_main_desc">"Discover the future of technology at your fingertips with our cutting-edge app. Whether you're a hobbyist, a professional, or just curious about the world of robotics and drones, we've got you covered."</string>
 </resources>
